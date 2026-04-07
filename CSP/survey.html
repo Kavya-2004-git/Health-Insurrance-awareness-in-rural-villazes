@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="google_translate_element"></div>
+
+<header>
+  <h1>Survey</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="schemes.html">Schemes</a>
+    <a href="apply.html">Apply</a>
+    <a href="survey.html" class="active">Survey</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- TITLE -->
+  <section class="card">
+    <h2>Health Awareness Survey</h2>
+    <p>
+      Help us understand your health insurance needs. This will help improve awareness in rural areas.
+    </p>
+  </section>
+  <p>Survey Progress: <span id="progress">0%</span></p>
+  <!-- SURVEY FORM -->
+  <section class="card">
+    <form>
+      <button type="button" onclick="speakEnglish()" class="button">
+        🔊 English
+      </button>
+      <br><br>
+
+      <!-- Name -->
+      <label><b>Name:</b></label><br>
+      <input type="text" placeholder="Enter your name" required><br><br>
+
+      <!-- Age -->
+      <label><b>Age:</b></label><br>
+      <input type="number" placeholder="Enter your age"><br><br>
+
+      <!-- Gender -->
+      <label><b>Gender:</b></label><br>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select><br><br>
+
+      <!-- Village -->
+      <label><b>Village:</b></label><br>
+      <input type="text" placeholder="Enter your village"><br><br>
+
+      <!-- Insurance -->
+      <label><b>Do you have health insurance?</b></label><br>
+      <select>
+        <option>Yes</option>
+        <option>No</option>
+      </select><br><br>
+
+      <!-- Scheme awareness -->
+      <label><b>Do you know about government schemes?</b></label><br>
+      <select>
+        <option>Yes</option>
+        <option>No</option>
+      </select><br><br>
+
+      <!-- Preferred scheme -->
+      <label><b>Which scheme are you interested in?</b></label><br>
+      <select>
+        <option>Ayushman Bharat – PMJAY</option>
+        <option>Aarogyasri (Andhra Pradesh)</option>
+        <option>Aarogyasri (Telangana)</option>
+        <option>Employees’ State Insurance (ESI)</option>
+        <option>Central Govt. Health Scheme (CGHS)</option>
+        <option>Rashtriya Swasthya Bima Yojana (RSBY)</option>
+        <option>Ministry of Health & Family Welfare (MoHFW)</option>
+      </select><br><br>
+      <!-- Family Size -->
+       <label><b>Family Members:</b></label><br>
+       <input type="number" placeholder="Number of family members"><br><br>
+       <!-- Income -->
+        <label><b>Monthly Income:</b></label><br>
+        <select>
+          <option>Below ₹10,000</option>
+          <option>₹10,000 - ₹25,000</option>
+          <option>₹25,000 - ₹50,000</option>
+          <option>Above ₹50,000</option>
+        </select><br><br>
+        <!-- Hospital Access -->
+         <label><b>Do you have a hospital nearby?</b></label><br>
+         <select>
+          <option>Yes</option>
+          <option>No</option>
+        </select><br><br>
+        <!-- Awareness Level -->
+         <label><b>How did you learn about insurance?</b></label><br>
+         <select>
+          <option>TV</option>
+          <option>Friends/Family</option>
+          <option>Government Camps</option>
+          <option>Not aware</option>
+        </select><br><br>
+
+      <!-- Problems -->
+      <label><b>What problems do you face in getting insurance?</b></label><br>
+      <textarea rows="4" placeholder="Write your problem..."></textarea><br><br>
+
+      <!-- Submit -->
+      <button class="button">Submit</button>
+
+    </form>
+    <p id="successMsg" style="color:green; display:none;">
+        ✅ Thank you! Your response has been recorded.
+    </p>
+  </section>
+  <!-- INFO SECTION -->
+  <section class="card">
+    <h3>Why this survey?</h3>
+    <ul>
+      <li>✔ Understand village needs</li>
+      <li>✔ Improve awareness programs</li>
+      <li>✔ Help people get benefits</li>
+    </ul>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'te,hi,en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
